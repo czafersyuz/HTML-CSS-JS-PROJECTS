@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    background-color: ;
+
+}
+html{
+   
+  
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+h1{
+    
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blueviolet;
+    font-size: 4rem;
+  
+   
+}
+.container{
+    box-sizing:content-box;
+    display:flex;
+    flex-direction: column;
+    width: 50rem;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    border-radius: 2,5rem ;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+}
+.lottery{
+    width: 12rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+#num{
+    width: 13rem;
+    height: 3rem;
+    border-radius:  3rem ;
+    border: none;
+    font-size: 1,5rem;
+    cursor: pointer;
+    padding-left: 6rem;
+    margin-right: 4rem;
+ 
+}
+
+#enter{
+    width: 15rem;
+    height: 3rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: rgb(16, 139, 0);
+    color: white;
+    font-size: 1,5rem;
+    cursor: pointer;
+ 
+}
+#enter:hover{
+    background-color: red;
+    color: black;
+    width: 12rem;
+    height: 3rem;
+  
+}
+#result{
+    font-size: 1,5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
