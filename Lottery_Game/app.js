@@ -9,21 +9,21 @@ enter.addEventListener("click", () => {
     } else {
         count = 0
         while (number.value > count) {
-            resultNumber = [];
-            while (resultNumber.length < 6) {
+            listNumber = [];
+            while (listNumber.length < 6) {
                 let randomNumber = Math.floor(Math.random() * 90)+1
-                if (resultNumber.includes(randomNumber)) { continue; }
-                else { resultNumber.push(randomNumber) }
+                if (listNumber.includes(randomNumber)) { continue; }
+                else { listNumber.push(randomNumber) }
             }
-            resultNumber7 = [];
+           /listNumberSeven = [];
             let randomNumber = Math.floor(Math.random() * 90)+1
-            if (resultNumber.includes(randomNumber)) { continue; }
-            else { resultNumber7.push(randomNumber) }
+            if (listNumber.includes(randomNumber)) { continue; }
+            else { listNumberSeven.push(randomNumber) }
 
             let randomNumber8 = Math.floor(Math.random() * 90)+1
-            resultNumber7.push(randomNumber8);
+            listNumberSeven.push(randomNumber8);
             count += 1
-            result.innerHTML += resultNumber.sort(function (a, b) { return a - b }).join(" , ") + " | " + resultNumber7.join(" | ") + "<hr>"
+            result.innerHTML += listNumber.sort(function (a, b) { return a - b }).join(" , ") + " | " + listNumberSeven.join(" | ") + "<hr>"
         }
         number.value = ""
     }
