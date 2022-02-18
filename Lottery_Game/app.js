@@ -1,34 +1,34 @@
 let enter = document.getElementById("enter");
 let result = document.getElementById("result");
-let num = document.getElementById("num");
+let number = document.getElementById("number");
 
 enter.addEventListener("click", () => {
-    if (Number(num.value) < 1 || Number(num.value) > 8 ) {
+    if (Number(number.value) < 1 || Number(number.value) > 8 ) {
         result.innerHTML = "Please enter a number between 1 to 8";
-        num.value = ""
+        number.value = ""
     } else {
         count = 0
-        while (num.value > count) {
+        while (number.value > count) {
             resultNumber = [];
             while (resultNumber.length < 6) {
-                let randomNumber = Math.trunc(Math.random() * 90+1)
+                let randomNumber = Math.floor(Math.random() * 90)+1
                 if (resultNumber.includes(randomNumber)) { continue; }
                 else { resultNumber.push(randomNumber) }
             }
             resultNumber7 = [];
-            let randomNumber = Math.trunc(Math.random() * 90+1)
+            let randomNumber = Math.floor(Math.random() * 90)+1
             if (resultNumber.includes(randomNumber)) { continue; }
             else { resultNumber7.push(randomNumber) }
 
-            let randomNumber8 = Math.trunc(Math.random() * 90+1)
+            let randomNumber8 = Math.floor(Math.random() * 90)+1
             resultNumber7.push(randomNumber8);
             count += 1
             result.innerHTML += resultNumber.sort(function (a, b) { return a - b }).join(" , ") + " | " + resultNumber7.join(" | ") + "<hr>"
         }
-        num.value = ""
+        number.value = ""
     }
     
-    num.addEventListener("change", () => {
+    number.addEventListener("change", () => {
         result.innerHTML = ""
     })
 })
